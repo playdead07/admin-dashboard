@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <link rel="stylesheet" href="form.css"> <!-- Link to your CSS -->
+    <script src="registration.js" defer></script>
+</head>
+<body>
+    <h1>Register</h1>
+    <form id="registrationForm">
+        <label for="username">Username:</label>
+        <input type="text" id="username" required>
+        <label for="password">Password:</label>
+        <input type="password" id="password" required>
+        <button type="submit">Register</button>
+        <p class="success-message" id="successMessage" style="display:none;">Registration successful! Redirecting...</p>
+        <p class="error-message" id="errorMessage" style="display:none;"></p>
+    </form>
+    <!-- Link for already registered users -->
+    <div class="already-registered">
+        <p>Already registered? <a href="login.html">Login here</a></p>
+    </div>
+</body>
+</html>

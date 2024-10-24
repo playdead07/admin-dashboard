@@ -1,0 +1,125 @@
+/* Global Styling */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: url('background1.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #333;
+}
+
+#wrapper {
+    display: flex;
+    height: 100vh;
+}
+
+/* Sidebar Styling */
+#sidebar-wrapper {
+    width: 250px;
+    background-color: #1c1c1c;
+    color: white;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+#sidebar-wrapper h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #f1c40f;
+    font-weight: bold;
+    border-bottom: 2px solid #f1c40f;
+    padding-bottom: 10px;
+}
+
+.list-group {
+    list-style: none;
+    padding: 0;
+}
+
+.list-group-item {
+    padding: 15px 20px;
+    margin: 10px 0;
+    background-color: #333;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    font-size: 18px;
+}
+
+.list-group-item:hover {
+    background-color: #f1c40f;
+    color: #1c1c1c;
+}
+
+/* Page Content Styling */
+#page-content-wrapper {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.section {
+    margin-bottom: 30px;
+}
+
+input, button {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button {
+    background-color: #1c1c1c;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #f1c40f;
+    color: #1c1c1c;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #333;
+    color: white;
+    text-transform: uppercase;
+}
+
+tr:hover {
+    background-color: #f1c40f;
+    color: #1c1c1c;
+}
+
+/* Search Bar */
+#searchInput {
+    margin-bottom: 15px;
+    padding: 12px;
+    font-size: 16px;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+
