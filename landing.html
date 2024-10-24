@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eligibility Criteria</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="landing.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Check Your Eligibility for Schemes</h1>
+        <div id="profileSection" style="display: none;">
+            <h2>Profile Information</h2>
+            <form id="profileForm">
+                <input type="text" id="profileGender" placeholder="Gender (Male/Female/Other)" required>
+                <input type="text" id="profileCaste" placeholder="Caste" required>
+                <input type="number" id="profileIncome" placeholder="Annual Income" required>
+                <button type="submit">Save Profile</button>
+            </form>
+        </div>
+        <form id="eligibilityForm">
+            <input type="text" id="gender" placeholder="Gender (Male/Female/Other)" required>
+            <input type="text" id="caste" placeholder="Caste" required>
+            <input type="number" id="income" placeholder="Annual Income" required>
+            <button type="submit">Check Eligibility</button>
+        </form>
+        <button id="profileButton">Profile</button>
+        <div id="eligibleSchemes"></div>
+    </div>
+    
+    <script>
+        document.getElementById('profileButton').addEventListener('click', function() {
+            const profileSection = document.getElementById('profileSection');
+            profileSection.style.display = profileSection.style.display === 'none' ? 'block' : 'none';
+        });
+
+        document.getElementById('profileForm').addEventListener('submit', async (event) => {
+            event.preventDefault();
+            const gender = document.getElementById('profileGender').value;
+            const caste = document.getElementById('profileCaste').value;
+            const income = document.getElementById('profileIncome').value;
+
+            const response = await fetch('/api/user_profiles', {  // Adjust the endpoint as necessary
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ gender, caste, income })
+            });
+
+            if (response.ok) {
+                alert('Profile saved successfully!');
+            } else {
+                alert('Error saving profile.');
+            }
+        });
+    </script>
+</body>
+</html>
